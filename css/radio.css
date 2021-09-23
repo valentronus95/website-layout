@@ -1,0 +1,244 @@
+:root {
+	--red: #FF3A3A;
+	--yellow: #FFCD4E;
+	--grad-1: radial-gradient(122% 93.75% at 18.75% 6.25%, #4E5CDA 0%, #6E42B7 100%);
+	--purple: #5C0790;
+	--grad-2: radial-gradient(171.8% 132.02% at 50% -32.02%, #B3F1FF 0%, #D8FFEA 100%);
+	--black: #000000;
+	--grey1: #525252;
+	--grey2: #858585;
+	--grey3: #ADADAD;
+	--grey4: #C9C9C9;
+	--grey5: #F4F4F4;
+	--grey6: #FBFBFB;
+	--white: #FFFFFF;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+   padding: 0;
+	font-family: 'Roboto', 'Tahoma', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.back-arrow {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--grey1);
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+.arrow {
+	margin-right: 12px;
+}
+.back-arrow:hover {
+	color: var(--purple);	
+}
+.wrapper-radio {
+	width: 1310px;
+    margin-top: 36px;
+    padding: 0px 90px;
+}
+.radio-bg {
+	width: 1200px;
+	height: 600px;
+	background-color: var(--white);
+	display: flex;
+	list-style: none;
+}
+.radio-fm {
+	width: 500px;
+	height: 416px;
+	margin-right: 140px;
+}
+.total-amount {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--grey2);
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 16px 0px;
+}
+.amount {
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 37px;
+	color: var(--grey1);
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 16px 0px;
+}
+.payment-delivery {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--grey1);
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin-top: 30px;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+.default-radio-text {
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 19px;
+	color: #858585;
+	position: relative;
+	padding-left: 42px;
+	min-height: 32px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.default-radio-text::before {
+	content: '';
+	width: 28px;
+	height: 28px;
+	border: 2px solid #525252;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: var(--white);
+}
+.default-radio-text::after {
+	display: none;
+	content: '';
+	width: 14px;
+	height: 14px;
+	background: #5C0790;
+	border-radius: 50%;
+	position: absolute;
+	left: 9px;
+	top: 9px;
+}
+.default-radio:checked + .default-radio-text::after {
+	display: block;
+}
+.default-radio:enabled + .default-radio-text:hover {
+	color: var(--grey1);
+}
+.default-radio:enabled + .default-radio-text:hover::before {
+	background-color: var(--grey5);
+}
+.default-radio:disabled + .default-radio-text {
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+.box-radio {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 10px;
+}
+.default-input {
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--grey3);
+	padding: 20px;
+	background-color: var(--grey2);
+}
+.default-input:hover {
+	background: var(--grey5);
+	border: 2px solid rgba(0, 0, 0, 0.2);	
+}
+.default-input:focus {
+	outline: none;
+	background-color: var(--white);
+	border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.data-delivery {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--grey1);
+}
+::placeholder {
+	color: var(--grey3);
+}
+.fill-forms input {
+	position: static;
+	width: 298px;
+	height: 51px;
+	color: var(--grey3);
+	background: var(--grey5);
+	border-radius: 12px;
+	border: 0;
+}
+.fill-left p {
+	margin-right: 30px;
+}
+.coment {
+   width: 626px;
+   height: 117px;  
+   padding: 0px 20px;
+   background: var(--grey5);
+   border-radius: 12px;
+   border: 0;   
+   color: var(--grey3);
+   resize: none; /*убирает растягивание блока*/
+   font-size: 16px;
+   font-family: roboto;
+   padding: 10px 10px;
+}
+.coment:hover {
+	background: var(--grey5);
+	border: 2px solid rgba(0, 0, 0, 0.2);	
+}
+.coment:focus {
+	outline: none;
+	background-color: var(--white);
+	border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.submit {
+	cursor: pointer;
+	flex-direction: row-reverse;
+	width: 230px;
+	height: 48px;
+	background: var(--red);
+	box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--white);
+	border: 0;
+}
+.button-submit {
+	display: flex;
+    justify-content: flex-end;
+}
+.submit:hover {
+	opacity: 70%;
+}
+.submit:active {
+	opacity: 30%;
+}
